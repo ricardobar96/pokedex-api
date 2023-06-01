@@ -50,11 +50,10 @@ public class PokemonListAdapter extends RecyclerView.Adapter<PokemonListAdapter.
         LinkedTreeMap<Pokemon, Object> linkedTreeMap = (LinkedTreeMap)p;
 
         holder.nombreTextView.setText(Objects.requireNonNull(linkedTreeMap.get("name")).toString());
-        String numeroStr = linkedTreeMap.get("url").toString();
+        String numeroStr = Objects.requireNonNull(linkedTreeMap.get("url")).toString();
         String[] NumeroPokemon = numeroStr.split("/");
         String numeroFinalStr = NumeroPokemon[6];
         System.out.println(numeroFinalStr);
-        int numeroFinal = Integer.parseInt(numeroFinalStr);
 
         Glide.with(context)
                 .load( "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
