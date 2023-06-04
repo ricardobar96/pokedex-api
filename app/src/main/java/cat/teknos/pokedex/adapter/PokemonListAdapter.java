@@ -1,12 +1,13 @@
 package cat.teknos.pokedex.adapter;
 
 import android.content.Context;
-import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -23,7 +24,7 @@ import cat.teknos.pokedex.api.Pokemon;
 
 public class PokemonListAdapter extends RecyclerView.Adapter<PokemonListAdapter.ViewHolder> {
 
-    private final Context context;
+    private static Context context;
     private final ArrayList<Pokemon> dataset;
 
     public PokemonListAdapter(Context context){
@@ -81,7 +82,10 @@ public class PokemonListAdapter extends RecyclerView.Adapter<PokemonListAdapter.
 
             fotoImageView.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Log.d("MyApp","I am here");
+                    // Here goes new intent pokemon view
+                    Toast toast = new Toast(context);
+                    toast.makeText(context, nombreTextView.getText().toString().toUpperCase(),
+                            Toast.LENGTH_LONG).show();
                 }
             });
         }

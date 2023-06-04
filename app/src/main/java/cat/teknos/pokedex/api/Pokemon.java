@@ -22,8 +22,4 @@ public class Pokemon {
     public void setName(String name) {
         this.name = name;
     }
-
-    public String getDescription() {
-        return "It's " + getName() + "!";
-    }
 }
