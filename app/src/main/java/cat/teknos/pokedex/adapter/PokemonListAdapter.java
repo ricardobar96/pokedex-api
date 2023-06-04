@@ -1,6 +1,7 @@
 package cat.teknos.pokedex.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -77,6 +78,12 @@ public class PokemonListAdapter extends RecyclerView.Adapter<PokemonListAdapter.
 
             fotoImageView = itemView.findViewById(R.id.fotoImageView);
             nombreTextView = itemView.findViewById(R.id.tvName);
+
+            fotoImageView.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Log.d("MyApp","I am here");
+                }
+            });
         }
     }
 }
