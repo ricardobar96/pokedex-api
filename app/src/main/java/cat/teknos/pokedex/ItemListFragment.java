@@ -65,13 +65,13 @@ public class ItemListFragment extends Fragment {
                     assert response.body() != null;
                     ArrayList<Pokemon> pokemonList =((PokemonFetchResults) response.body()).getResults();
                 } else {
-                    Log.d("Error producido:", "Error no controlado al obtener la lista");
+                    Log.d("Error:", "Couldn't obtain list");
                 }
             }
 
             @Override
             public void onFailure(@NonNull Call call, @NonNull Throwable t) {
-                Log.d("Error producido:", t.toString());
+                Log.d("Error:", t.toString());
             }
         });
 
