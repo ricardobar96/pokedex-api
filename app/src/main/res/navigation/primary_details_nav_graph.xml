@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/item_list_fragment"
-        android:name="cat.teknos.pokedex.ItemLIstFragment"
+        android:name="cat.teknos.pokedex.ItemListFragment"
         android:label="ItemListFragment" >
         <action
             android:id="@+id/show_item_detail"

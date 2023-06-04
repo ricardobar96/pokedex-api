@@ -65,7 +65,7 @@ public class ItemListFragment extends Fragment {
                     assert response.body() != null;
                     ArrayList<Pokemon> pokemonList =((PokemonFetchResults) response.body()).getResults();
                 } else {
-                    Log.d("Error:", "Couldn't obtain list");
+                    Log.d("Error:", "Couldn't get list");
                 }
             }
 
