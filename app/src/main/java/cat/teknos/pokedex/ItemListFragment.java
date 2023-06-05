@@ -97,7 +97,7 @@ public class ItemListFragment extends Fragment {
             Toast.makeText(
                     itemView.getContext(),
                     "Context click of item " + item.id,
-                    Toast.LENGTH_LONG
+                    Toast.LENGTH_SHORT
             ).show();
             return true;
         };
