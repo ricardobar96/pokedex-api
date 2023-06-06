@@ -6,22 +6,29 @@
     android:orientation="vertical"
     tools:ignore="UseCompoundDrawables">
 
-    <ImageView
-        android:id="@+id/fotoImageView"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@xml/shape"
-        tools:ignore="ContentDescription" />
-
-    <TextView
-        android:id="@+id/tvName"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal"
-        android:text="Pokedex"
-        android:textColor="@color/teal_700"
-        android:textAlignment="center"
-        android:textAllCaps="true" />
+        android:paddingBottom="16dp">
 
+        <ImageView
+            android:id="@+id/fotoImageView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@xml/shape"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Pokedex"
+            android:textColor="@color/teal_700"
+            android:textAlignment="textStart"
+            android:paddingTop="50dp"
+            android:paddingLeft="16dp"
+            android:textAllCaps="true" />
+
+    </RelativeLayout>
 </LinearLayout>
