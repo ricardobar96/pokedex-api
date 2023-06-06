@@ -1,4 +1,3 @@
-<!-- Adding the same root's ID for view binding as other layout configurations -->
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"

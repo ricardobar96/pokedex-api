@@ -81,10 +81,9 @@ public class PokemonListAdapter extends RecyclerView.Adapter<PokemonListAdapter.
 
             fotoImageView.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    // Here goes new intent pokemon view
                     Toast toast = new Toast(context);
                     toast.makeText(context, nombreTextView.getText().toString().toUpperCase(),
-                            Toast.LENGTH_LONG).show();
+                            Toast.LENGTH_SHORT).show();
                 }
             });
         }

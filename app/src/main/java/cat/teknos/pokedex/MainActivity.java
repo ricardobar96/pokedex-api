@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         listaPokemonAdapter = new PokemonListAdapter(this.getBaseContext());
         recyclerView.setAdapter(listaPokemonAdapter);
         recyclerView.setHasFixedSize(true);
-        // Change number pokemon per row here
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 1);
         recyclerView.setLayoutManager(gridLayoutManager);
 
