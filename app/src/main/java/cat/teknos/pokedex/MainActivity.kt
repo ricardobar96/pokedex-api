@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import cat.teknos.pokedex.adapter.PokemonListAdapter
+import cat.teknos.pokedex.api.Pokemon
 import cat.teknos.pokedex.api.PokemonFetchResults
 import cat.teknos.pokedex.service.PokemonAPIService
 import retrofit2.Call
@@ -47,11 +48,11 @@ class MainActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
                     val pokemonFetchResults = response.body()!!
                     val pokemonList = pokemonFetchResults.results
-                    for (i in pokemonList.indices) {
+                    for (i in pokemonList?.indices!!) {
                         val p: Any = pokemonList[i]
                         Log.i(TAG, " Pokemon: $p")
                     }
-                    pokemonAdapterList!!.addPokemon(pokemonList)
+                    pokemonAdapterList!!.addPokemon(pokemonList as ArrayList<Pokemon>?)
                 } else {
                     Log.e(TAG, " Error: " + response.errorBody())
                 }
