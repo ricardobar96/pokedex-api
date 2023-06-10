@@ -27,12 +27,12 @@ public class PokemonListAdapter extends RecyclerView.Adapter<PokemonListAdapter.
     private final ArrayList<Pokemon> dataset;
 
     public PokemonListAdapter(Context context){
-        this.context = context;
+        PokemonListAdapter.context = context;
         dataset = new ArrayList<>();
 
     }
 
-    public void agregarPokemon(ArrayList<Pokemon> listaPokemon) {
+    public void addPokemon(ArrayList<Pokemon> listaPokemon) {
         dataset.addAll(listaPokemon);
         notifyDataSetChanged();
     }
@@ -40,8 +40,7 @@ public class PokemonListAdapter extends RecyclerView.Adapter<PokemonListAdapter.
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_pokemon, parent,
-                false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_pokemon, parent, false);
         return new ViewHolder(view);
     }
 
@@ -50,7 +49,7 @@ public class PokemonListAdapter extends RecyclerView.Adapter<PokemonListAdapter.
         Object p = dataset.get(position);
         LinkedTreeMap<Pokemon, Object> linkedTreeMap = (LinkedTreeMap)p;
 
-        holder.nombreTextView.setText(Objects.requireNonNull(linkedTreeMap.get("name")).toString());
+        holder.tvPokemonName.setText(Objects.requireNonNull(linkedTreeMap.get("name")).toString());
         String numeroStr = Objects.requireNonNull(linkedTreeMap.get("url")).toString();
         String[] NumeroPokemon = numeroStr.split("/");
         String numeroFinalStr = NumeroPokemon[6];
@@ -61,7 +60,7 @@ public class PokemonListAdapter extends RecyclerView.Adapter<PokemonListAdapter.
                         + numeroFinalStr + ".png")
                 .centerCrop()
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .into(holder.fotoImageView);
+                .into(holder.ivPokemon);
     }
 
     @Override
@@ -70,21 +69,17 @@ public class PokemonListAdapter extends RecyclerView.Adapter<PokemonListAdapter.
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        private final ImageView fotoImageView;
-        private final TextView nombreTextView;
+        private final ImageView ivPokemon;
+        private final TextView tvPokemonName;
 
         public ViewHolder(View itemView){
             super(itemView);
 
-            fotoImageView = itemView.findViewById(R.id.fotoImageView);
-            nombreTextView = itemView.findViewById(R.id.tvName);
+            ivPokemon = itemView.findViewById(R.id.ivPokemon);
+            tvPokemonName = itemView.findViewById(R.id.tvPokemonName);
 
-            fotoImageView.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    Toast toast = new Toast(context);
-                    toast.makeText(context, nombreTextView.getText().toString().toUpperCase(),
-                            Toast.LENGTH_SHORT).show();
-                }
+            ivPokemon.setOnClickListener(v -> {
+                Toast.makeText(context, tvPokemonName.getText().toString().toUpperCase(), Toast.LENGTH_SHORT).show();
             });
         }
     }

@@ -46,12 +46,12 @@ class MainActivity : AppCompatActivity() {
             ) {
                 if (response.isSuccessful) {
                     val pokemonFetchResults = response.body()!!
-                    val listaPokemon = pokemonFetchResults.results
-                    for (i in listaPokemon.indices) {
-                        val p: Any = listaPokemon[i]
+                    val pokemonList = pokemonFetchResults.results
+                    for (i in pokemonList.indices) {
+                        val p: Any = pokemonList[i]
                         Log.i(TAG, " Pokemon: $p")
                     }
-                    pokemonAdapterList!!.agregarPokemon(listaPokemon)
+                    pokemonAdapterList!!.addPokemon(pokemonList)
                 } else {
                     Log.e(TAG, " Error: " + response.errorBody())
                 }
