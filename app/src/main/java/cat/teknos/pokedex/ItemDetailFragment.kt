@@ -14,9 +14,12 @@ import cat.teknos.pokedex.placeholder.PlaceholderContent.PlaceholderItem
 import com.google.android.material.appbar.CollapsingToolbarLayout
 
 class ItemDetailFragment : Fragment() {
+
     private var mItem: PlaceholderItem? = null
     private var mToolbarLayout: CollapsingToolbarLayout? = null
     private var mTextView: TextView? = null
+    private var binding: FragmentItemDetailBinding? = null
+
     private val dragListener = OnDragListener { _: View?, event: DragEvent ->
         if (event.action == DragEvent.ACTION_DROP) {
             val clipDataItem = event.clipData.getItemAt(0)
@@ -25,7 +28,7 @@ class ItemDetailFragment : Fragment() {
         }
         true
     }
-    private var binding: FragmentItemDetailBinding? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         assert(arguments != null)

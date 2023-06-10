@@ -16,8 +16,8 @@ import com.google.gson.internal.LinkedTreeMap
 import java.util.Locale
 import java.util.Objects
 
-class PokemonListAdapter(context: Context?) :
-    RecyclerView.Adapter<PokemonListAdapter.ViewHolder>() {
+class PokemonListAdapter(context: Context?) : RecyclerView.Adapter<PokemonListAdapter.ViewHolder>() {
+
     private val dataset: ArrayList<Pokemon>
 
     init {
@@ -59,18 +59,14 @@ class PokemonListAdapter(context: Context?) :
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val ivPokemon: ImageView
-        val tvPokemonName: TextView
+        val ivPokemon: ImageView = itemView.findViewById(R.id.ivPokemon)
+        val tvPokemonName: TextView = itemView.findViewById(R.id.tvPokemonName)
 
         init {
-            ivPokemon = itemView.findViewById(R.id.ivPokemon)
-            tvPokemonName = itemView.findViewById(R.id.tvPokemonName)
             ivPokemon.setOnClickListener {
-                Toast.makeText(
-                    context, tvPokemonName.text.toString().uppercase(
-                        Locale.getDefault()
-                    ), Toast.LENGTH_SHORT
-                ).show()
+                val pokemonName = tvPokemonName.text.toString().uppercase(Locale.getDefault())
+                val toastContext = itemView.context.applicationContext
+                Toast.makeText(toastContext, pokemonName, Toast.LENGTH_SHORT).show()
             }
         }
     }
