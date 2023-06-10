@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     private fun getData() {
         val service = retrofit!!.create(PokemonAPIService::class.java)
         val pokemonFetchResultsCall = service.pokemons
-        pokemonFetchResultsCall.enqueue(object : Callback<PokemonFetchResults?> {
+        pokemonFetchResultsCall?.enqueue(object : Callback<PokemonFetchResults?> {
             override fun onResponse(
                 call: Call<PokemonFetchResults?>,
                 response: Response<PokemonFetchResults?>
