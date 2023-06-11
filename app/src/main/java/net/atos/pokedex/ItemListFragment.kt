@@ -1,4 +1,4 @@
-package cat.teknos.pokedex
+package net.atos.pokedex
 
 import android.content.ClipData
 import android.content.ClipDescription
@@ -13,13 +13,13 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import cat.teknos.pokedex.api.PokemonFetchResults
-import cat.teknos.pokedex.databinding.FragmentItemListBinding
-import cat.teknos.pokedex.databinding.ItemListContentBinding
-import cat.teknos.pokedex.placeholder.PlaceholderContent
-import cat.teknos.pokedex.placeholder.PlaceholderContent.PlaceholderItem
-import cat.teknos.pokedex.service.PokemonAPIService
 import com.google.gson.GsonBuilder
+import net.atos.pokedex.api.PokemonFetchResults
+import net.atos.pokedex.databinding.FragmentItemListBinding
+import net.atos.pokedex.databinding.ItemListContentBinding
+import net.atos.pokedex.placeholder.PlaceholderContent.ITEMS
+import net.atos.pokedex.placeholder.PlaceholderContent.PlaceholderItem
+import net.atos.pokedex.service.PokemonAPIService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -107,7 +107,7 @@ class ItemListFragment : Fragment() {
         onContextClickListener: View.OnContextClickListener
     ) {
         recyclerView.adapter = SimpleItemRecyclerViewAdapter(
-            PlaceholderContent.ITEMS,
+            ITEMS,
             onClickListener,
             onContextClickListener
         )
@@ -119,8 +119,7 @@ class ItemListFragment : Fragment() {
         private val mOnContextClickListener: View.OnContextClickListener
     ) : RecyclerView.Adapter<SimpleItemRecyclerViewAdapter.ViewHolder>() {
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-            val binding =
-                ItemListContentBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            val binding = ItemListContentBinding.inflate(LayoutInflater.from(parent.context), parent, false)
             return ViewHolder(binding)
         }
 

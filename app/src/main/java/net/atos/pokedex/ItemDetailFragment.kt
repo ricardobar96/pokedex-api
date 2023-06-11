@@ -1,4 +1,4 @@
-package cat.teknos.pokedex
+package net.atos.pokedex
 
 import android.os.Bundle
 import android.view.DragEvent
@@ -8,14 +8,13 @@ import android.view.View.OnDragListener
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import cat.teknos.pokedex.databinding.FragmentItemDetailBinding
-import cat.teknos.pokedex.placeholder.PlaceholderContent
-import cat.teknos.pokedex.placeholder.PlaceholderContent.PlaceholderItem
 import com.google.android.material.appbar.CollapsingToolbarLayout
+import net.atos.pokedex.databinding.FragmentItemDetailBinding
+import net.atos.pokedex.placeholder.PlaceholderContent
 
 class ItemDetailFragment : Fragment() {
 
-    private var mItem: PlaceholderItem? = null
+    private var mItem: PlaceholderContent.PlaceholderItem? = null
     private var mToolbarLayout: CollapsingToolbarLayout? = null
     private var mTextView: TextView? = null
     private var binding: FragmentItemDetailBinding? = null

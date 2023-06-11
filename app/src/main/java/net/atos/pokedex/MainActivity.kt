@@ -1,4 +1,4 @@
-package cat.teknos.pokedex
+package net.atos.pokedex
 
 import android.os.Bundle
 import android.util.Log
@@ -6,10 +6,10 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import cat.teknos.pokedex.adapter.PokemonListAdapter
-import cat.teknos.pokedex.api.Pokemon
-import cat.teknos.pokedex.api.PokemonFetchResults
-import cat.teknos.pokedex.service.PokemonAPIService
+import net.atos.pokedex.adapter.PokemonListAdapter
+import net.atos.pokedex.api.Pokemon
+import net.atos.pokedex.api.PokemonFetchResults
+import net.atos.pokedex.service.PokemonAPIService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

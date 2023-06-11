@@ -1,4 +1,4 @@
-package cat.teknos.pokedex.placeholder
+package net.atos.pokedex.placeholder
 
 object PlaceholderContent {
     

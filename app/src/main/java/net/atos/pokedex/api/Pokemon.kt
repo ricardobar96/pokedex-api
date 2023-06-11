@@ -1,4 +1,4 @@
-package cat.teknos.pokedex.api
+package net.atos.pokedex.api
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

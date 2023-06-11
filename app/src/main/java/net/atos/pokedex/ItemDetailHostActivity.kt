@@ -1,4 +1,4 @@
-package cat.teknos.pokedex
+package net.atos.pokedex
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +7,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.AppBarConfiguration.Builder
 import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
-import cat.teknos.pokedex.databinding.ActivityItemDetailBinding
+import net.atos.pokedex.databinding.ActivityItemDetailBinding
 
 class ItemDetailHostActivity : AppCompatActivity() {
 
