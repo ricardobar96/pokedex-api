@@ -62,6 +62,7 @@
         android:layout_marginEnd="16dp"
         app:srcCompat="@android:drawable/stat_notify_chat"
         app:layout_anchor="@+id/item_detail_scroll_view"
-        app:layout_anchorGravity="top|end" />
+        app:layout_anchorGravity="top|end"
+        tools:ignore="ContentDescription" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -9,9 +9,7 @@ import android.view.View
 import android.view.View.DragShadowBuilder
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.GsonBuilder
 import net.atos.pokedex.api.PokemonFetchResults
@@ -51,9 +49,7 @@ class ItemListFragment : Fragment() {
             )
             .build()
 
-        val pokemonApiService = retrofit.create(
-            PokemonAPIService::class.java
-        )
+        val pokemonApiService = retrofit.create(PokemonAPIService::class.java)
 
         val call = pokemonApiService.pokemons
         call?.enqueue(object : Callback<PokemonFetchResults?> {
@@ -68,37 +64,10 @@ class ItemListFragment : Fragment() {
                     Log.d("Error:", "Couldn't get list")
                 }
             }
-
             override fun onFailure(call: Call<PokemonFetchResults?>, t: Throwable) {
                 TODO("Not yet implemented")
             }
         })
-
-        val recyclerView = binding!!.itemList
-        val itemDetailFragmentContainer = view.findViewById<View>(R.id.item_detail_nav_container)
-
-        val onClickListener = View.OnClickListener { itemView: View ->
-            val item = itemView.tag as PlaceholderItem
-            val arguments = Bundle()
-            arguments.putString(ItemDetailFragment.ARG_ITEM_ID, item.id)
-            if (itemDetailFragmentContainer != null) {
-                findNavController(itemDetailFragmentContainer)
-                    .navigate(R.id.fragment_item_detail, arguments)
-            } else {
-                findNavController(itemView).navigate(R.id.show_item_detail, arguments)
-            }
-        }
-
-        val onContextClickListener = View.OnContextClickListener { itemView: View ->
-            val item = itemView.tag as PlaceholderItem
-            Toast.makeText(
-                itemView.context,
-                "Context click of item " + item.id,
-                Toast.LENGTH_SHORT
-            ).show()
-            true
-        }
-        setupRecyclerView(recyclerView, onClickListener, onContextClickListener)
     }
 
     private fun setupRecyclerView(
