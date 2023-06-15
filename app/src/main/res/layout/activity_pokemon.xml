@@ -8,13 +8,28 @@
 
     <TextView
         android:id="@+id/pokemon_subject"
-        style="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
         android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:paddingStart="0dp"
-        android:paddingEnd="0dp" />
+        android:paddingEnd="16dp"
+        android:shadowColor="#CDDC39"
+        android:shadowDx="8"
+        android:shadowDy="8"
+        android:shadowRadius="8"
+        android:text="Pokedex"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/teal_700"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.333"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/btn_back"
