@@ -70,11 +70,13 @@ class PokemonListAdapter(context: Context?) : RecyclerView.Adapter<PokemonListAd
         init {
             cardPokemon.setOnClickListener {
                 val pokemonName = tvPokemonName.text.toString().uppercase(Locale.getDefault())
-                val toastContext = itemView.context.applicationContext
-                Toast.makeText(toastContext, pokemonName, Toast.LENGTH_SHORT).show()
-                val intent = Intent(toastContext, PokemonActivity::class.java).apply {
+                //val toastContext = itemView.context.applicationContext
+                //Toast.makeText(toastContext, pokemonName, Toast.LENGTH_SHORT).show()
+                val intent = Intent(context, PokemonActivity::class.java).apply {
                     putExtra("subject", pokemonName)
+                    putExtra("number", finalStrNumber)
                 }
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 context?.startActivity(intent)
             }
         }
@@ -82,5 +84,6 @@ class PokemonListAdapter(context: Context?) : RecyclerView.Adapter<PokemonListAd
 
     companion object {
         private var context: Context? = null
+        val finalStrNumber = 10
     }
 }
