@@ -1,4 +1,4 @@
-package cat.teknos.pokedex
+package net.atos.pokedex
 
 import org.junit.Assert
 import org.junit.Test
