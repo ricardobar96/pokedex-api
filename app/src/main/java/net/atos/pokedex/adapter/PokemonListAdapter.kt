@@ -1,6 +1,7 @@
 package net.atos.pokedex.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.google.gson.internal.LinkedTreeMap
+import net.atos.pokedex.PokemonActivity
 import net.atos.pokedex.R
 import net.atos.pokedex.api.Pokemon
 import java.util.Locale
@@ -70,6 +72,10 @@ class PokemonListAdapter(context: Context?) : RecyclerView.Adapter<PokemonListAd
                 val pokemonName = tvPokemonName.text.toString().uppercase(Locale.getDefault())
                 val toastContext = itemView.context.applicationContext
                 Toast.makeText(toastContext, pokemonName, Toast.LENGTH_SHORT).show()
+                val intent = Intent(toastContext, PokemonActivity::class.java).apply {
+                    putExtra("subject", pokemonName)
+                }
+                context?.startActivity(intent)
             }
         }
     }

@@ -13,17 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pokedex"
         tools:targetApi="31">
-
         <activity
-            android:name="net.atos.pokedex.ItemDetailHostActivity"
+            android:name=".PokemonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ItemDetailHostActivity"
             android:exported="true"
-            android:screenOrientation="portrait"
             android:resizeableActivity="true"
+            android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"
             android:exported="true"
+            android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
