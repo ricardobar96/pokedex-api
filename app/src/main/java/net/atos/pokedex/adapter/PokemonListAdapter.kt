@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
@@ -59,11 +61,12 @@ class PokemonListAdapter(context: Context?) : RecyclerView.Adapter<PokemonListAd
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val cardPokemon: CardView = itemView.findViewById(R.id.pokemon_item)
         val ivPokemon: ImageView = itemView.findViewById(R.id.ivPokemon)
         val tvPokemonName: TextView = itemView.findViewById(R.id.tvPokemonName)
 
         init {
-            ivPokemon.setOnClickListener {
+            cardPokemon.setOnClickListener {
                 val pokemonName = tvPokemonName.text.toString().uppercase(Locale.getDefault())
                 val toastContext = itemView.context.applicationContext
                 Toast.makeText(toastContext, pokemonName, Toast.LENGTH_SHORT).show()
