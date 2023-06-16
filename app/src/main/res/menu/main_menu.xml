@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
     <item
-        android:id="@+id/menu_btn"
+        android:id="@+id/search_btn"
         android:orderInCategory="3"
         android:icon="@drawable/ic_search"
         android:title="Search"

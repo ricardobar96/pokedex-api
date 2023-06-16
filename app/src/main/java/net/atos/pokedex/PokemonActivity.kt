@@ -3,6 +3,8 @@ package net.atos.pokedex
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
 import com.bumptech.glide.Glide
@@ -28,5 +30,14 @@ class PokemonActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             this.startActivity(intent)
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val menuInflater = getMenuInflater()
+        menuInflater.inflate(R.menu.pokemon_menu, menu)
+        return true }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return true
     }
 }
