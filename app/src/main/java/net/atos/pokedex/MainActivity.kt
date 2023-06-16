@@ -2,6 +2,8 @@ package net.atos.pokedex
 
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
@@ -62,6 +64,15 @@ class MainActivity : AppCompatActivity() {
                 Log.e(TAG, " Error: " + t.message)
             }
         })
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val menuInflater = getMenuInflater()
+        menuInflater.inflate(R.menu.top_menu, menu)
+        return true }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return true
     }
 
     companion object {
