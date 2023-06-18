@@ -33,11 +33,17 @@ class PokemonActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        val menuInflater = getMenuInflater()
-        menuInflater.inflate(R.menu.pokemon_menu, menu)
-        return true }
+        getMenuInflater().inflate(R.menu.pokemon_menu, menu)
+        return true
+    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return true
+        return when (item.itemId){
+            R.id.btn_back -> {
+                startActivity(Intent( this, MainActivity::class.java))
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }
