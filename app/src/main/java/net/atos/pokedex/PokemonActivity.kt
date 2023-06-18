@@ -13,7 +13,7 @@ class PokemonActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pokemon)
 
-        val btn_return = findViewById(R.id.btn_back) as Button
+        //val btn_return = findViewById(R.id.btn_back) as Button
         val subjectTextView: TextView = findViewById(R.id.pokemon_subject) as TextView
         val subjectKey:String = intent.getStringExtra("subject").toString()
         val numberKey: String = intent.getStringExtra("number").toString()
@@ -23,10 +23,12 @@ class PokemonActivity : AppCompatActivity() {
 
         //Picasso.get().load("http://i.imgur.com/DvpvklR.png").into(image);
 
+        /*
         btn_return.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             this.startActivity(intent)
         }
+        */
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
