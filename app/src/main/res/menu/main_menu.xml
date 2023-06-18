@@ -5,8 +5,9 @@
     tools:context=".MainActivity">
     <item
         android:id="@+id/search_btn"
-        android:orderInCategory="3"
         android:icon="@drawable/ic_search"
+        android:orderInCategory="3"
         android:title="Search"
+        android:tooltipText="Search"
         app:showAsAction="always" />
 </menu>

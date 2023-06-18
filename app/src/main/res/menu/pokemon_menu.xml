@@ -5,8 +5,9 @@
     tools:context=".PokemonActivity">
     <item
         android:id="@+id/back_btn"
-        android:orderInCategory="1"
         android:icon="@drawable/ic_back"
+        android:orderInCategory="1"
         android:title="Back"
+        android:tooltipText="Return"
         app:showAsAction="always" />
 </menu>
