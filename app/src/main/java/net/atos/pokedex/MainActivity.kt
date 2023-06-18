@@ -1,5 +1,6 @@
 package net.atos.pokedex
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -71,7 +72,13 @@ class MainActivity : AppCompatActivity() {
         return true }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return true
+        return when (item.itemId){
+            R.id.btn_search -> {
+                //Start SearchActivity view
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     companion object {

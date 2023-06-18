@@ -36,7 +36,7 @@ class PokemonActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId){
-            R.id.btn_back -> {
+            R.id.btn_home -> {
                 startActivity(Intent( this, MainActivity::class.java))
                 true
             }
