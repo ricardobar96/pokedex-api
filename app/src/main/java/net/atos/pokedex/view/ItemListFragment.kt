@@ -1,4 +1,4 @@
-package net.atos.pokedex
+package net.atos.pokedex.view
 
 import android.os.Bundle
 import android.util.Log
@@ -7,9 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.gson.GsonBuilder
-import net.atos.pokedex.api.PokemonFetchResults
+import net.atos.pokedex.model.api.PokemonFetchResults
 import net.atos.pokedex.databinding.FragmentItemListBinding
-import net.atos.pokedex.service.PokemonAPIService
+import net.atos.pokedex.model.service.PokemonAPIService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -46,8 +46,8 @@ class ItemListFragment : Fragment() {
         val call = pokemonApiService.pokemons
         call?.enqueue(object : Callback<PokemonFetchResults?> {
             override fun onResponse(
-                call: Call<PokemonFetchResults?>,
-                response: Response<PokemonFetchResults?>
+                    call: Call<PokemonFetchResults?>,
+                    response: Response<PokemonFetchResults?>
             ) {
                 if (response.isSuccessful) {
                     assert(response.body() != null)

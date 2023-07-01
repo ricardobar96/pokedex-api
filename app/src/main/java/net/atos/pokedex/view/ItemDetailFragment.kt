@@ -1,4 +1,4 @@
-package net.atos.pokedex
+package net.atos.pokedex.view
 
 import android.os.Bundle
 import android.view.DragEvent
@@ -9,8 +9,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.google.android.material.appbar.CollapsingToolbarLayout
+import net.atos.pokedex.R
 import net.atos.pokedex.databinding.FragmentItemDetailBinding
-import net.atos.pokedex.placeholder.PlaceholderContent
+import net.atos.pokedex.model.placeholder.PlaceholderContent
 
 class ItemDetailFragment : Fragment() {
 

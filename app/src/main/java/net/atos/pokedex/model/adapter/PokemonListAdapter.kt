@@ -1,4 +1,4 @@
-package net.atos.pokedex.adapter
+package net.atos.pokedex.model.adapter
 
 import android.content.Context
 import android.content.Intent
@@ -7,16 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.cardview.widget.CardView
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.google.gson.internal.LinkedTreeMap
-import net.atos.pokedex.PokemonActivity
+import net.atos.pokedex.view.PokemonActivity
 import net.atos.pokedex.R
-import net.atos.pokedex.api.Pokemon
+import net.atos.pokedex.model.entity.Pokemon
 import java.util.Locale
 import java.util.Objects
 

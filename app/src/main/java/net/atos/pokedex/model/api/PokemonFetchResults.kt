@@ -1,4 +1,4 @@
-package net.atos.pokedex.api
+package net.atos.pokedex.model.api
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

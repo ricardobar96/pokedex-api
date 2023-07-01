@@ -1,6 +1,5 @@
-package net.atos.pokedex
+package net.atos.pokedex.view
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -9,10 +8,11 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import net.atos.pokedex.adapter.PokemonListAdapter
-import net.atos.pokedex.api.Pokemon
-import net.atos.pokedex.api.PokemonFetchResults
-import net.atos.pokedex.service.PokemonAPIService
+import net.atos.pokedex.R
+import net.atos.pokedex.model.adapter.PokemonListAdapter
+import net.atos.pokedex.model.entity.Pokemon
+import net.atos.pokedex.model.api.PokemonFetchResults
+import net.atos.pokedex.model.service.PokemonAPIService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -45,8 +45,8 @@ class MainActivity : AppCompatActivity() {
         val pokemonFetchResultsCall = service.pokemons
         pokemonFetchResultsCall?.enqueue(object : Callback<PokemonFetchResults?> {
             override fun onResponse(
-                call: Call<PokemonFetchResults?>,
-                response: Response<PokemonFetchResults?>
+                    call: Call<PokemonFetchResults?>,
+                    response: Response<PokemonFetchResults?>
             ) {
                 if (response.isSuccessful) {
                     val pokemonFetchResults = response.body()!!

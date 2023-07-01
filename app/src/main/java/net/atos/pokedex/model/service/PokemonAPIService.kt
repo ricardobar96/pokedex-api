@@ -1,6 +1,6 @@
-package net.atos.pokedex.service
+package net.atos.pokedex.model.service
 
-import net.atos.pokedex.api.PokemonFetchResults
+import net.atos.pokedex.model.api.PokemonFetchResults
 import retrofit2.Call
 import retrofit2.http.GET
 

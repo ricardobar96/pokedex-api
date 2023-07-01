@@ -1,4 +1,4 @@
-package net.atos.pokedex.placeholder
+package net.atos.pokedex.model.placeholder
 
 object PlaceholderContent {
     

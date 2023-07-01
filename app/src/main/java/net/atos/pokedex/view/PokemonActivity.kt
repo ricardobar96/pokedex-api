@@ -1,12 +1,12 @@
-package net.atos.pokedex
+package net.atos.pokedex.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Button
 import android.widget.TextView
+import net.atos.pokedex.R
 
 class PokemonActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

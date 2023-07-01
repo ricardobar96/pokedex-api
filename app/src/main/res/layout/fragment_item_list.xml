@@ -15,7 +15,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         app:layoutManager="LinearLayoutManager"
-        tools:context="net.atos.pokedex.ItemDetailHostActivity"
+        tools:context="net.atos.pokedex.view.ItemDetailHostActivity"
         tools:listitem="@layout/item_list_content" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
