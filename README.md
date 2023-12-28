@@ -6,7 +6,7 @@
 <br/>
 <br/>
 
-![Sin título](https://github.com/ricardobar96/pokedex-api-old/assets/73242474/8d3bc509-bc91-4aed-a34b-cca1a11ebcbf)
+![Sin título](images/pokedex-new.png)
 
 
 
