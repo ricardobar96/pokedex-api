@@ -13,9 +13,9 @@ I modified the API to return only <b>the first 151 pokemon</b> (first generation
 ## Features
 
 - API consumption.
-- Recycler View display.
-- Display API text.
-- Display API Images.
+- RecyclerView display.
+- API text display.
+- API images display.
 
 <br/>
 <br/>
