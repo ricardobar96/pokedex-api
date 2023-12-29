@@ -7,6 +7,7 @@ I modified the API to return only <b>the first 151 pokemon</b> (first generation
 
 <br>
 <br>
+<br>
 
 | [📓 Features](#features) | [📷 Screenshots](#screenshots) | [🤝 Contributing](#contributing) | [🔖 License](#license) |
 |  -------- | -------- | ----------- | ----------- |
